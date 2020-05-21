@@ -25,6 +25,19 @@ class Header extends Component {
             <NavLink className="nav-item  m-2" to="/card">
               Card
             </NavLink>
+
+            <NavLink className="nav-item  m-2" to="/collections/men">
+              Men
+            </NavLink>
+            <NavLink className="nav-item  m-2" to="/collections/women">
+              Women
+            </NavLink>
+            <NavLink className="nav-item  m-2" to="/collections/unisex">
+              Unisex
+            </NavLink>
+            <NavLink className="nav-item  m-2" to="/collections">
+              Collections
+            </NavLink>
             <NavLink className="nav-item  m-2" to="/contact">
               Contact
             </NavLink>
