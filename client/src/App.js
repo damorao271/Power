@@ -5,7 +5,6 @@ import Home from "../src/components/home";
 import Footer from "../src/components/footer";
 import Card from "../src/components/common/card";
 import "bootstrap/dist/css/bootstrap.css";
-
 import { Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
