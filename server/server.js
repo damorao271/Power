@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 // Routes
 const users = require("./routes/users");
+const types = require("./routes/types");
 
 // Puertos y URL
 const uri = process.env.ATLAS_URI;
@@ -14,6 +15,7 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 app.use("/users", users);
+app.use("/types", types);
 
 // Connetc to ATLAS
 mongoose

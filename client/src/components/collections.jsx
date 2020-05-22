@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { getTypes } from "../services/typeService";
-import ListGroup from "./common/listGroup";
-import _ from "lodash";
+import { Route, Switch } from "react-router-dom";
+import CollectionGender from "./collectionGender";
 
 class Collections extends Component {
   state = {
     types: [],
+    products: [],
   };
 
   // Carga los Tipos de Mercancia
@@ -15,16 +16,29 @@ class Collections extends Component {
   }
 
   render() {
-    let { types } = this.state;
-    console.log("All Types", types);
-
-    types = _.uniqBy(types, "name");
-    console.log("Types", types);
+    const { types } = this.state;
 
     return (
       <div className="collections-container">
         <h1>Collections</h1>
-        <ListGroup types={types} />
+        <Switch>
+          <Route
+            path="/collections/unisex"
+            render={(props) => (
+              <CollectionGender gender="unisex" types={types} />
+            )}
+          />
+          <Route
+            path="/collections/women"
+            render={(props) => (
+              <CollectionGender gender="women" types={types} />
+            )}
+          />
+          <Route
+            path="/collections/men"
+            render={(props) => <CollectionGender gender="men" types={types} />}
+          />
+        </Switch>
       </div>
     );
   }

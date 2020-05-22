@@ -5,16 +5,15 @@ import Home from "../src/components/home";
 import Footer from "../src/components/footer";
 import Card from "../src/components/common/card";
 import Collections from "./components/collections";
-import CollectionsGenre from "../src/components/common/collectionsGenre";
 import "bootstrap/dist/css/bootstrap.css";
 import { Route, Switch, Redirect } from "react-router-dom";
-
+// import CollectionGender from "./components/collectionGender";
 function App() {
   return (
     <div className="App">
       <Header></Header>
       <Switch>
-        <Route path="/collections/:genre" component={CollectionsGenre} />
+        {/* <Route path="/collections/:gender/:name" component={Type} /> */}
         {/* <Route path="/collections/women" component={Collections} /> */}
         {/* <Route path="/collections/unisex" component={Collections} /> */}
         <Route path="/collections" component={Collections} />
